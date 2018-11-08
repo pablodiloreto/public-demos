@@ -1,6 +1,19 @@
-# * Powershell Execution Policy bypassed to run these scripts
+###########################################################################
+# Script generado para DEMO || NO UTILIZAR EN PRODUCCION ||
+# Autor: Pablo Ariel Di Loreto
+# Email: pablodiloreto@hotmail.com
+# Social: @PabloDiLoreto
+# Contexto: .NET Conf CO v2018
+###########################################################################
+# Objetivo: instalación de Web Server (IIS) en Windows Server 2016
+# Consideraciones: este script también agrega características opcionales de IIS
+# Fecha de actualización: 08/11/2018
+###########################################################################
+
+# Powershell Execution Policy bypassed to run these scripts
 Set-ExecutionPolicy Bypass -Scope Process
 
+# Inicio de agregado de características
 Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole
 Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServer
 Enable-WindowsOptionalFeature -Online -FeatureName IIS-CommonHttpFeatures
@@ -34,17 +47,16 @@ Enable-WindowsOptionalFeature -Online -FeatureName IIS-ISAPIFilter
 Enable-WindowsOptionalFeature -Online -FeatureName IIS-HttpCompressionStatic
 Enable-WindowsOptionalFeature -Online -FeatureName IIS-ASPNET45
 
-# If you need classic ASP (not recommended)
+# ¿Necesitás ASP clásico? (espero que no!)
 # Enable-WindowsOptionalFeature -Online -FeatureName IIS-ASP
 
 
-#REM The following optional components require 
-#REM Chocolatey OR Web Platform Installer to install
+# Los siguientes componentes requieren el gestor de paquetes Chocolatey
 
-#REM Install UrlRewrite Module for Extensionless Urls (optional)
-#REM & "C:\Program Files\Microsoft\Web Platform Installer\WebpiCmd-x64.exe" /install /Products:UrlRewrite2 /AcceptEULA /SuppressPostFinish
+# URL Rewrite
 choco install urlrewrite -y
 
-#REM Install WebDeploy for Deploying to IIS (optional)
-#REM & "C:\Program Files\Microsoft\Web Platform Installer\WebpiCmd-x64.exe" /install /Products:WDeployNoSMO /AcceptEULA /SuppressPostFinish
+# WebDeploy
 choco install webdeploy -y
+
+# Fin del script
