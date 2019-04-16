@@ -1,0 +1,7 @@
+El 12 de Abril de 2019 ejecutamos, junto con colegas y amigos, la versión #Argentina del evento lanzamiento, en donde más de 70 asistentes disfrutaron de 5 charlas en las que recorrimos la historia y novedades de Visual Studio 2019.
+
+Organizadores:
+- Sebastián Perez (@sebaleoperez)
+- Guillermo Bellmann (@gjbellmann)
+- Pablo Di Loreto (@pablodiloreto)
+- Germán Kuber (@germankuber)
